@@ -1,24 +1,25 @@
-# README
+## Barber Booking
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### List of technologies
 
-Things you may want to cover:
+- Rails
+- HTML
+- CSS 
+- Tailwinds
 
-* Ruby version
+### Getting start
 
-* System dependencies
+- Register 
+- Login 
+- Book an appointment
 
-* Configuration
+### How to book an appointment?
 
-* Database creation
+- Login 
+- Select a "New appointment"
+- Fill the form 
 
-* Database initialization
 
-* How to run the test suite
+## What is the hardest part ? 
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Hmm actually everything. 
