@@ -19,6 +19,17 @@
 - Select a "New appointment"
 - Fill the form 
 
+### authorizations
+
+### User
+- User can book an appointment.
+- User can just see his appointment.
+- User can edit his appointment.
+- User can cancle appointment.
+- User can not add barbers.
+### Admin 
+- Can modify everything in the website.
+- Can add barbers to the website.
 
 ## What is the hardest part ? 
 
