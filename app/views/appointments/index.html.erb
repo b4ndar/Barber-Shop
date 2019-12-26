@@ -12,10 +12,10 @@
     <% @appointments.each do |appointment| %>
 
 		<div class="w-1/3 max-w-1/3 md:w-1/3 p-6 mt-4 border">
-			<div class=" bg-white">
-					<p class="w-full text-gray-600 text-3xl text-center">Appointment</p>
-          <p class="text-center">Date:</p>
-					<p class="border-b text-center"><%= appointment.date %></p>
+		  <div class=" bg-white">
+		  <p class="w-full text-gray-600 text-3xl text-center">Appointment</p>
+		  <p class="text-center">Date:</p>
+		  <p class="border-b text-center"><%= appointment.date %></p>
           <p class="text-center">Barber:</p>
           <p class="border-b text-center"><%= appointment.barber.name %></p>
           <p class="text-center">Customer:</p>
@@ -26,7 +26,7 @@
 				<div class="flex items-center justify-center">
 					<button class="mx-auto lg:mx-0 hover:underline bg-green-700 font-bold rounded-full my-6 py-4 px-8 shadow-lg"><%= link_to 'Show', appointment , :class => 'text-white hover:text-white' %></button>
           <button class="mx-auto lg:mx-0 hover:underline bg-yellow-500 font-bold rounded-full my-6 py-4 px-8 shadow-lg"><%= link_to 'Edit', edit_appointment_path(appointment), :class => 'text-white hover:text-white' %></button>
-          <button class="mx-auto lg:mx-0 hover:underline bg-red-700 font-bold rounded-full my-6 py-4 px-8 shadow-lg"><%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'text-white hover:text-white' %></button>
+          <button class="mx-auto lg:mx-0 hover:underline bg-red-700 font-bold rounded-full my-6 py-4 px-8 shadow-lg"><%= link_to 'destroy', appointment, method: :destroy, data: { confirm: 'Are you sure?' }, :class => 'text-white hover:text-white' %></button>
 				</div>
 			</div>
 		</div>

@@ -1,4 +1,4 @@
-<%= bootstrap_form_for(@appointment) do |f| %>
+<%= form_for(@appointment) do |f| %>
   <% if appointment.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
@@ -11,16 +11,21 @@
     </div>
   <% end %>
 
-  <div class="input-field col s6">
-  	<%= f.date_select :date%>
-  </div>
-  <div class="input-field col s6">
-  	<%= f.time_select :time%>
-  </div>
-  <div class="input-field col-3 s6">
-    <%= f.select :barber_id, Barber.all.collect { |p| [ p.name, p.id ] } , { label: "Choose your favorite barber:" }, { class: "selectpicker" } %>
-    </div>
-      <div class="actions">
-        <%= f.primary %>
-      </div>
+  <div class="w-1/3 max-w-1/3 md:w-1/3 p-6 mx-auto mt-32 border">
+			<div class=" bg-white">
+					<p class="w-full text-gray-600 text-3xl text-center">Appointment</p>
+          <p class="text-center">Date:</p>
+					<p class="border-b text-center"><%= f.date_select :date%></p>
+          <p class="text-center">Barber:</p>
+          <p class="border-b text-center"><%= f.time_select :time%></p>
+          <p class="text-center">Customer:</p>
+          <p class="border-b text-center"><%= f.select :barber_id, Barber.all.collect { |p| [ p.name, p.id ] } , { label: "Choose your favorite barber:" }, { class: "selectpicker" } %></p>
+        <hr>
+			</div>
+			<div class="flex justify-center mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+        <button><%= f.submit %></button>
+        
+			</div>
+		</div>
+
 <% end %>

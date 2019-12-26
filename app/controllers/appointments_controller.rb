@@ -14,6 +14,15 @@ class AppointmentsController < ApplicationController
         @appointment = Appointment.find(params[:id])
       end
 
+      def destroy
+        Appointment.find(params[:id]).destroy
+        respond_to do |format|
+          format.html { redirect_to appointments_url, notice: 'Appointment was successfully destroyed.' }
+          format.json { head :no_content }
+        end
+      end
+      
+
       def create
         param=appointment_params.merge :user_id => current_user.id 
         @appointment = Appointment.new(param)
