@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @barber.name %>
+</p>
+<p>
+  <strong>Rating:</strong>
+  <%= @barber.raing %>
+</p>
+<p>
+  <strong>Phone number:</strong>
+  <%= @barber.phone %>
+</p>
+
+<%= link_to 'Edit', edit_barber_path(@barber) %> |
+<%= link_to 'Back', barbers_path %>
