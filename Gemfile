@@ -5,7 +5,7 @@ ruby '2.6.5'
 
 gem 'devise'
 
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootstrap-sass', '~> 3.4.1'
 gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
 gem "administrate"
