@@ -26,7 +26,7 @@
 				<div class="flex items-center justify-center">
 					<button class="mx-auto lg:mx-0 hover:underline bg-green-700 font-bold rounded-full my-6 py-4 px-8 shadow-lg"><%= link_to 'Show', appointment , :class => 'text-white hover:text-white' %></button>
           <button class="mx-auto lg:mx-0 hover:underline bg-yellow-500 font-bold rounded-full my-6 py-4 px-8 shadow-lg"><%= link_to 'Edit', edit_appointment_path(appointment), :class => 'text-white hover:text-white' %></button>
-          <button class="mx-auto lg:mx-0 hover:underline bg-red-700 font-bold rounded-full my-6 py-4 px-8 shadow-lg"><%= link_to 'destroy', appointment, method: :destroy, data: { confirm: 'Are you sure?' }, :class => 'text-white hover:text-white' %></button>
+          <button class="mx-auto lg:mx-0 hover:underline bg-red-700 font-bold rounded-full my-6 py-4 px-8 shadow-lg"><%= link_to 'destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'text-white hover:text-white' %></button>
 				</div>
 			</div>
 		</div>
