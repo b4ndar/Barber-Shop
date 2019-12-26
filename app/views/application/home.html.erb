@@ -6,16 +6,15 @@
 	<div class="container  mt-32 px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
 		<!--Left Col-->
 		<div class="flex m-auto mt-8 flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-			<p class="uppercase tracking-loose w-full">What business are you?</p>
 			<h1 class="my-4 text-5xl font-bold uppercase leading-tight">invest in your hair you wear it everyday</h1>
-			<p class="leading-normal text-2xl mb-8">Sub-hero message, not too long and not too short. Make it just right!</p>
+			<h4 class=" m-auto leading-normal uppercase text-center mb-8">You want some cool haircut?</h4>
 			<% unless user_signed_in? %>
-				<div class="m-auto">
-					<%= link_to 'Login',  new_user_session_path , :class => ' bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg' %>
+				<div class=" z-50 m-auto">
+					<%= link_to 'Login',  new_user_session_path , :class => ' z-50 bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg' %>
 				</div>
 				<% else %>
-				<div class="m-auto">
-					<%= link_to 'Appointments',  appointments_path  , :class => ' hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg' %>
+				<div class=" z-50 m-auto">
+					<%= link_to 'Appointments',  appointments_path  , :class => ' z-50 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg' %>
 				</div>
 				<% end %>
 		</div>	
@@ -44,7 +43,7 @@
 
 <section class="bg-white border-b py-8">
 	<div class="container max-w-5xl mx-auto m-8">
-		<h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">Title</h1>
+		<h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">How it works</h1>
 		<div class="w-full mb-4">	
 			<div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
 		</div>
@@ -118,10 +117,7 @@
 			
 				<a class="text-orange-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"  href="#"> 
 					<!--Icon from: http://www.potlabicons.com/ -->
-					<svg class="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.005 512.005">
-					<rect fill="#2a2a31" x="16.539" y="425.626" width="479.767" height="50.502" transform="matrix(1,0,0,1,0,0)" fill="rgb(0,0,0)" />
-					<path class="plane-take-off" d=" M 510.7 189.151 C 505.271 168.95 484.565 156.956 464.365 162.385 L 330.156 198.367 L 155.924 35.878 L 107.19 49.008 L 211.729 230.183 L 86.232 263.767 L 36.614 224.754 L 0 234.603 L 45.957 314.27 L 65.274 347.727 L 105.802 336.869 L 240.011 300.886 L 349.726 271.469 L 483.935 235.486 C 504.134 230.057 516.129 209.352 510.7 189.151 Z "/>
-					</svg> Barber Shop
+					
 					
 				</a>
 			</div>

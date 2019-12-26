@@ -21,48 +21,35 @@ class BarbersController < ApplicationController
   def edit
   end
 
-  # POST /barbers
-  # POST /barbers.json
+  
   def create
     @barber = Barber.new(barber_params)
-
-    respond_to do |format|
       if @barber.save
-        format.html { redirect_to @barber, notice: 'Barber was successfully created.' }
-        format.json { render :show, status: :created, location: @barber }
+        redirect_to @barber, notice: 'Barber was successfully created.'
       else
-        format.html { render :new }
-        format.json { render json: @barber.errors, status: :unprocessable_entity }
+        render :new
       end
     end
   end
 
-  # PATCH/PUT /barbers/1
-  # PATCH/PUT /barbers/1.json
   def update
     respond_to do |format|
       if @barber.update(barber_params)
-        format.html { redirect_to @barber, notice: 'Barber was successfully updated.' }
-        format.json { render :show, status: :ok, location: @barber }
+       redirect_to @barber, notice: 'Barber was successfully updated.'
       else
-        format.html { render :edit }
-        format.json { render json: @barber.errors, status: :unprocessable_entity }
+       render json: @barber.errors, status: :unprocessable_entity
       end
     end
   end
 
-  # DELETE /barbers/1
-  # DELETE /barbers/1.json
   def destroy
     @barber.destroy
-    respond_to do |format|
-      format.html { redirect_to barbers_url, notice: 'Barber was successfully destroyed.' }
-      format.json { head :no_content }
+     redirect_to barbers_url, notice: 'Barber was successfully destroyed.'
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+
     def set_barber
       @barber = Barber.find(params[:id])
     end

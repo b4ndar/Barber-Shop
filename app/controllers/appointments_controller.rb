@@ -16,28 +16,20 @@ class AppointmentsController < ApplicationController
 
       def destroy
         Appointment.find(params[:id]).destroy
-        respond_to do |format|
-          format.html { redirect_to appointments_url, notice: 'Appointment was successfully destroyed.' }
-          format.json { head :no_content }
+          redirect_to appointments_url, notice: 'Appointment was successfully destroyed.'
         end
-      end
+      
       
 
       def create
         param=appointment_params.merge :user_id => current_user.id 
         @appointment = Appointment.new(param)
-    
-        respond_to do |format|
           if @appointment.save
-            format.html { redirect_to @appointment, notice: 'Appointment was successfully created.' }
-            format.json { render :show, status: :created, location: @appointment }
+             redirect_to @appointment, notice: 'Appointment was successfully created.' 
           else
-            format.html { render :new }
-            format.json { render json: @appointment.errors, status: :unprocessable_entity }
+            render json: @appointment.errors, status: :unprocessable_entity 
           end
         end
-      end
-
       def edit
         @appointment = Appointment.find(params[:id])
       end
@@ -45,7 +37,6 @@ class AppointmentsController < ApplicationController
       def update
         appointment = Appointment.find(params[:id])
         appointment.update(params.require(:appointment).permit(:date, :time, :barber_id, :user_id))
-          
         redirect_to appointment
       end
       
