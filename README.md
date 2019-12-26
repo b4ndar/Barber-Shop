@@ -19,7 +19,7 @@
 - Select a "New appointment"
 - Fill the form 
 
-### authorizations
+### Authorizations
 
 ### User
 - User can book an appointment.
